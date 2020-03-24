@@ -1,0 +1,2 @@
+C:\Users\albin\source\repos\Slutprojekt\Slutprojekt\obj\x86\Debug\Slutprojekt.csprojAssemblyReference.cache
+C:\Users\albin\source\repos\Slutprojekt\Slutprojekt\obj\x86\Debug\Slutprojekt.csproj.CoreCompileInputs.cache
