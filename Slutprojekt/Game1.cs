@@ -76,13 +76,22 @@ namespace Slutprojekt
             ball.Y += y_speed;
 
             if (kstate.IsKeyDown(Keys.Up))
-                right_paddle.Y -= 5;
+                player1.Y -= 5;
             if (kstate.IsKeyDown(Keys.Down))
-                right_paddle.Y += 5;
+                player1.Y += 5;
             if (kstate.IsKeyDown(Keys.W))
-                left_paddle.Y -= 5;
+                player2.Y -= 5;
             if (kstate.IsKeyDown(keys.S))
-                left_paddle.Y += 5;
+                player2.Y += 5;
+
+            if (player2.Y < 0)
+                player2.Y = 0;
+            if (player2.Y > Window.ClientBounds.Height - playe2.Height)
+                player2.Y = Window.ClientBounds.Height - player2.Height;
+            if (player1.X < 0)
+                player1.X = 0;
+            if (player1.Y > Window.ClientBounds.Height - player1.Height)
+                player1.Y = Window.ClientBounds.Height - player1.Height;
 
             // TODO: Add your update logic here
 
