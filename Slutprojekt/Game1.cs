@@ -11,13 +11,13 @@ namespace Slutprojekt
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        Texture2D ball;
+        Texture2D bild;
 
-        Rectangle ball = new Rectangle(100, 100, 20, 20);
-        Rectangle player1 = new Rectangle(10, 150, 20, 150);
-        Rectangle player2 = new Rectangle(770, 150, 20, 150);
+        Rectangle boll = new Rectangle(100, 100, 20, 20);
+        Rectangle spelare1 = new Rectangle(10, 150, 20, 150);
+        Rectangle spelare2 = new Rectangle(770, 150, 20, 150);
 
-        int x_speed = 2;
+        int x_speed = 10;
         int y_speed = 2;
 
         public Game1()
@@ -47,7 +47,7 @@ namespace Slutprojekt
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            ball = Content.Load<Texture2D>("Ball");
+            bild = Content.Load<Texture2D>("Bild");
 
             // TODO: use this.Content to load your game content here
         }
@@ -72,26 +72,35 @@ namespace Slutprojekt
                 Exit();
             KeyboardState kstate = Keyboard.GetState();
 
-            ball.X += x_speed;
-            ball.Y += y_speed;
+            boll.X += x_speed;
+            boll.Y += y_speed;
 
-            if (kstate.IsKeyDown(Keys.Up))
-                player1.Y -= 5;
-            if (kstate.IsKeyDown(Keys.Down))
-                player1.Y += 5;
             if (kstate.IsKeyDown(Keys.W))
-                player2.Y -= 5;
-            if (kstate.IsKeyDown(keys.S))
-                player2.Y += 5;
+                spelare1.Y -= 5;
+            if (kstate.IsKeyDown(Keys.S))
+                spelare1.Y += 5;
+            if (kstate.IsKeyDown(Keys.Up))
+                spelare2.Y -= 5;
+            if (kstate.IsKeyDown(Keys.Down))
+                spelare2.Y += 5;
 
-            if (player2.Y < 0)
-                player2.Y = 0;
-            if (player2.Y > Window.ClientBounds.Height - playe2.Height)
-                player2.Y = Window.ClientBounds.Height - player2.Height;
-            if (player1.X < 0)
-                player1.X = 0;
-            if (player1.Y > Window.ClientBounds.Height - player1.Height)
-                player1.Y = Window.ClientBounds.Height - player1.Height;
+            if (spelare2.Y < 0)
+                spelare2.Y = 0;
+            if (spelare2.Y > Window.ClientBounds.Height - spelare2.Height)
+                spelare2.Y = Window.ClientBounds.Height - spelare2.Height;
+            if (spelare1.Y < 0)
+                spelare1.Y = 0;
+            if (spelare1.Y > Window.ClientBounds.Height - spelare1.Height)
+                spelare1.Y = Window.ClientBounds.Height - spelare1.Height;
+
+            if (boll.Y < 0 || boll.Y > Window.ClientBounds.Height - boll.Height)
+                y_speed *=-1;
+            
+            if (boll.Intersects(spelare1) || boll.Intersects(spelare2))
+                x_speed *=-1;
+            
+            if (boll.X < 0 || boll.X > Window.ClientBounds.Width - boll.Width)
+                Exit();
 
             // TODO: Add your update logic here
 
@@ -107,9 +116,9 @@ namespace Slutprojekt
             GraphicsDevice.Clear(Color.Black);
 
             spriteBatch.Begin();
-            spriteBatch.Draw(pixel, ball, Color.White);
-            spriteBatch.Draw(pixel, left_paddle, Color.White);
-            spriteBatch.Draw(pixel, right_paddle, Color.White);
+            spriteBatch.Draw(bild, boll, Color.White);
+            spriteBatch.Draw(bild, spelare1, Color.White);
+            spriteBatch.Draw(bild, spelare2, Color.White);
             spriteBatch.End();
             // TODO: Add your drawing code here
 
