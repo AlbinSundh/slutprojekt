@@ -4,7 +4,7 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/albin/source/repos/slutprojekt/Slutprojekt/Content/Bild.png</File>
+    <File>C:/Users/albin/Source/Repos/slutprojekt/Slutprojekt/Content/Bild.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />

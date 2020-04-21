@@ -19,6 +19,8 @@ namespace Slutprojekt
 
         int x_speed = 10;
         int y_speed = 2;
+        private SpriteFont font;
+        private int score = 0;
 
         public Game1()
         {
@@ -48,6 +50,7 @@ namespace Slutprojekt
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
             bild = Content.Load<Texture2D>("Bild");
+            font = Content.Load<SpriteFont>("Score");
 
             // TODO: use this.Content to load your game content here
         }
@@ -98,14 +101,23 @@ namespace Slutprojekt
             
             if (boll.Intersects(spelare1) || boll.Intersects(spelare2))
                 x_speed *=-1;
+
             
-            if (boll.X < 0 || boll.X > Window.ClientBounds.Width - boll.Width)
-                Exit();
+           if(boll.X < 0 || boll.X > Window.ClientBounds.Width - boll.Width) 
+            Exit();
+
+        
+
+
+            
+               
 
             // TODO: Add your update logic here
 
             base.Update(gameTime);
+            score++;
         }
+
 
         /// <summary>
         /// This is called when the game should draw itself.
@@ -119,6 +131,7 @@ namespace Slutprojekt
             spriteBatch.Draw(bild, boll, Color.White);
             spriteBatch.Draw(bild, spelare1, Color.White);
             spriteBatch.Draw(bild, spelare2, Color.White);
+            spriteBatch.DrawString(font, "Score: " + score, new Vector2(100, 100), Color.Black);
             spriteBatch.End();
             // TODO: Add your drawing code here
 

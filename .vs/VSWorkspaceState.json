@@ -1,8 +1,14 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Slutprojekt"
+    "\\Slutprojekt",
+    "\\Slutprojekt\\bin",
+    "\\Slutprojekt\\bin\\Windows",
+    "\\Slutprojekt\\Content\\obj",
+    "\\Slutprojekt\\obj\\Windows",
+    "\\Slutprojekt\\obj\\x86",
+    "\\Slutprojekt\\obj\\x86\\Debug"
   ],
-  "SelectedNode": "\\Slutprojekt\\Slutprojekt.csproj",
+  "SelectedNode": "\\Slutprojekt\\Content",
   "PreviewInSolutionExplorer": false
 }
