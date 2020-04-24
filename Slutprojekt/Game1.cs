@@ -13,14 +13,16 @@ namespace Slutprojekt
         SpriteBatch spriteBatch;
         Texture2D bild;
 
-        Rectangle boll = new Rectangle(100, 100, 20, 20);
+        Rectangle boll = new Rectangle(400, 200, 20, 20);
         Rectangle spelare1 = new Rectangle(10, 150, 20, 150);
         Rectangle spelare2 = new Rectangle(770, 150, 20, 150);
 
+        SpriteFont scorefont;
+        int score1 = 0;
+        int score2 = 0;
+
         int x_speed = 10;
         int y_speed = 2;
-        private SpriteFont font;
-        private int score = 0;
 
         public Game1()
         {
@@ -50,7 +52,8 @@ namespace Slutprojekt
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
             bild = Content.Load<Texture2D>("Bild");
-            font = Content.Load<SpriteFont>("Score");
+            scorefont = Content.Load<SpriteFont>("scorefont");
+
 
             // TODO: use this.Content to load your game content here
         }
@@ -102,20 +105,32 @@ namespace Slutprojekt
             if (boll.Intersects(spelare1) || boll.Intersects(spelare2))
                 x_speed *=-1;
 
-            
-           if(boll.X < 0 || boll.X > Window.ClientBounds.Width - boll.Width) 
-            Exit();
 
-        
+            if (boll.X > Window.ClientBounds.Width - boll.Width)
+            {
+                score1++;
+                boll.X = 400;
+                boll.Y = 200;
+                x_speed *= -1;
+            }
+
+            if (boll.X < 0)
+            {
+                score2++;
+                boll.X = 400;
+                boll.Y = 200;
+                x_speed *= -1;
+            }
 
 
-            
-               
+
+
+
+
 
             // TODO: Add your update logic here
 
             base.Update(gameTime);
-            score++;
         }
 
 
@@ -131,8 +146,10 @@ namespace Slutprojekt
             spriteBatch.Draw(bild, boll, Color.White);
             spriteBatch.Draw(bild, spelare1, Color.White);
             spriteBatch.Draw(bild, spelare2, Color.White);
-            spriteBatch.DrawString(font, "Score: " + score, new Vector2(100, 100), Color.Black);
+            spriteBatch.DrawString(scorefont, score1.ToString(), new Vector2(10, 10), Color.White);
+            spriteBatch.DrawString(scorefont, score2.ToString(), new Vector2(780, 10), Color.White);
             spriteBatch.End();
+
             // TODO: Add your drawing code here
 
             base.Draw(gameTime);

@@ -4,11 +4,12 @@
     "\\Slutprojekt",
     "\\Slutprojekt\\bin",
     "\\Slutprojekt\\bin\\Windows",
-    "\\Slutprojekt\\Content\\obj",
-    "\\Slutprojekt\\obj\\Windows",
-    "\\Slutprojekt\\obj\\x86",
-    "\\Slutprojekt\\obj\\x86\\Debug"
+    "\\Slutprojekt\\bin\\Windows\\x86",
+    "\\Slutprojekt\\Content",
+    "\\Slutprojekt\\Content\\bin",
+    "\\Slutprojekt\\Content\\bin\\Windows",
+    "\\Slutprojekt\\Content\\bin\\Windows\\Content"
   ],
-  "SelectedNode": "\\Slutprojekt\\Content",
+  "SelectedNode": "\\Slutprojekt\\Slutprojekt.csproj",
   "PreviewInSolutionExplorer": false
 }

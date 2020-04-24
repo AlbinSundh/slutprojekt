@@ -2,8 +2,8 @@
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SourceFile>C:/Users/albin/source/repos/slutprojekt/Slutprojekt/Content/Bild.png</SourceFile>
   <SourceTime>2020-04-03T10:04:02.900471+02:00</SourceTime>
-  <DestFile>C:/Users/albin/source/repos/slutprojekt/Slutprojekt/Content/bin/Windows/Content/Bild.xnb</DestFile>
-  <DestTime>2020-04-24T09:05:31.3720272+02:00</DestTime>
+  <DestFile>C:/Users/albin/source/repos/slutprojekt/Slutprojekt/Content/bin/Windows/Bild.xnb</DestFile>
+  <DestTime>2020-04-24T08:26:55.6927259+02:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-12-08T17:35:54+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

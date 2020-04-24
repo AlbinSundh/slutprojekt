@@ -5,10 +5,8 @@
   <Config />
   <SourceFiles>
     <File>C:/Users/albin/source/repos/slutprojekt/Slutprojekt/Content/Bild.png</File>
-    <File>C:/Users/albin/source/repos/slutprojekt/Slutprojekt/Content/scorefont.spritefont</File>
   </SourceFiles>
   <DestFiles>
-    <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>
 </SourceFileCollection>

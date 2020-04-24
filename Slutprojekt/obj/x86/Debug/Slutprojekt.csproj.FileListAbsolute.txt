@@ -22,3 +22,4 @@ C:\Users\albin\source\repos\slutprojekt\Slutprojekt\obj\x86\Debug\Slutprojekt.cs
 C:\Users\albin\source\repos\slutprojekt\Slutprojekt\obj\x86\Debug\Slutprojekt.exe
 C:\Users\albin\source\repos\slutprojekt\Slutprojekt\obj\x86\Debug\Slutprojekt.pdb
 C:\Users\albin\source\repos\slutprojekt\Slutprojekt\bin\Windows\x86\Debug\Content\Bild.xnb
+C:\Users\albin\source\repos\slutprojekt\Slutprojekt\bin\Windows\x86\Debug\Content\scorefont.xnb
